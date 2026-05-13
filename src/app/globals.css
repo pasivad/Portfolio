@@ -1,26 +1,231 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ===== Brand ===== */
+  --color-brand-primary: #e6c36a;
+  --color-brand-secondary: #9c7f3f;
+  --color-brand-glow: #e6c36a4d;
+
+  /* ===== Background ===== */
+  --color-bg-primary: #111418;
+  --color-bg-secondary: #11161a;
+  --color-bg-header: #0b1219;
+  --color-bg-card: #10151b;
+
+  /* ===== Surface (cards, panels) ===== */
+  --color-surface-primary: #23272e;
+  --color-surface-secondary: #2a2f37;
+
+  /* ===== Text ===== */
+  --color-text-primary: #f4f4ef;
+  --color-text-secondary: #b8b8b0;
+  --color-text-muted: #8a8a83;
+
+  /* ===== Border ===== */
+  --color-border-primary: #6b72804d;
+  --color-border-secondary: #9aa1ad73;
+
+  /* ===== Semantic ===== */
+  --color-success: #5fdc9c;
+  --color-info: #66b3ff;
+  --color-warning: #e8a75f;
+
+  /* ===== Neutral / Effects ===== */
+  --color-black: #000000;
+  --color-black-soft: #00000066;
+  --color-black-strong: #000000a6;
+  --color-blue-active: #85b4c7;
+
+  /* ===== State / UI helpers ===== */
+  --color-hover-accent: #e6c36a14;
+  --color-active-accent: #e6c36a33;
+
+  /* ===== Fonts ===== */
+  --font-heading: var(--font-rajdhani), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-rajdhani), sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@layer base {
+  .scrollbar-modal {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-secondary) transparent;
+  }
+
+  .scrollbar-modal::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-modal::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-modal::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-secondary);
+  }
+
+  .scrollbar-modal::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-brand-secondary);
+  }
+}
+
+@layer utilities {
+  .animate-modal-backdrop-in {
+    animation: modal-backdrop-in 0.2s ease-out both;
+  }
+  .animate-modal-backdrop-out {
+    animation: modal-backdrop-out 0.2s ease-in both;
+  }
+  .animate-modal-panel-in {
+    animation: modal-panel-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-modal-panel-out {
+    animation: modal-panel-out 0.2s ease-in both;
+  }
+
+  .animate-pulse-dot {
+    animation: pulse-dot 1.5s ease-in-out infinite;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
+
+  /*
+   * cut-corners — scalable chamfered-corner clip-path system
+   *
+   * Usage:
+   *   cut-corners          → base (requires a size modifier or --cut override)
+   *   cut-corners-xs       → 4px   tiny chips, tags
+   *   cut-corners-sm       → 8px   small buttons, badges
+   *   cut-corners-md       → 14px  cards, panels
+   *   cut-corners-lg       → 22px  section blocks
+   *   cut-corners-xl       → 32px  wide banners
+   *   cut-corners-2xl      → 44px  hero / full-width
+   *
+   *   Arbitrary: add [--cut:20px] alongside cut-corners for one-offs
+   */
+  .cut-corners {
+    --cut: 10px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--cut)) 0,
+      100% var(--cut),
+      100% 100%,
+      var(--cut) 100%,
+      0 calc(100% - var(--cut))
+    );
+  }
+
+  .cut-corners-xs {
+    --cut: 4px;
+  }
+  .cut-corners-sm {
+    --cut: 8px;
+  }
+  .cut-corners-md {
+    --cut: 14px;
+  }
+  .cut-corners-base {
+    --cut: 18px;
+  }
+  .cut-corners-lg {
+    --cut: 22px;
+  }
+  .cut-corners-xl {
+    --cut: 32px;
+  }
+  .cut-corners-2xl {
+    --cut: 44px;
+  }
+
+  /* backward-compat alias */
+  .cut-corners-btn {
+    --cut: 8px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--cut)) 0,
+      100% var(--cut),
+      100% 100%,
+      var(--cut) 100%,
+      0 calc(100% - var(--cut))
+    );
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 16px var(--color-brand-glow);
+  }
+
+  .btn-glow-strong:hover {
+    box-shadow: 0 0 24px var(--color-brand-glow);
+  }
+}
