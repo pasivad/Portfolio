@@ -12,12 +12,12 @@ const ProfileInfo = () => {
       <h1 className="uppercase text-brand-primary font-bold text-7xl pt-4">Vlad Pasichnyk</h1>
       <ul className="flex flex-wrap gap-x-4 gap-y-1 bullet-list list-disc list-inside mt-4 text-[13px] text-text-secondary">
         <li>Software engineer</li>
-        <li>2.5y shipping production web</li>
+        <li>3y shipping production web</li>
         <li>learning C++ & Unreal Engine 5</li>
       </ul>
       <div className="max-w-170 my-6 text-[15px] text-text-secondary">
         {
-          'Motivated Software Engineer with 2.5 years of experience in JavaScript, TypeScript, React, and Node.js. As a self-taught developer, I am a dedicated and hardworking individual with a strong passion for personal and professional growth. Currently expanding into game development using C++ and Unreal Engine 5, working on a pet projects while continuously strengthening my C++ skills. I’m always eager to expand my expertise and deliver practical solutions that add value. With strong problem-solving skills and a collaborative mindset, I confidently handle different parts of the development process and contribute effectively to team projects.'
+          'Motivated Software Engineer with 4+ years of experience in JavaScript, TypeScript, React, and Node.js, including 3 years of professional experience in a company environment. As a self-taught developer, I am a dedicated and hardworking individual with a strong passion for personal and professional growth. Currently expanding into game development using C++ and Unreal Engine 5, working on a pet projects while continuously strengthening my C++ skills. I continuously refine my full-stack JavaScript skills alongside my work in other areas. I’m always eager to expand my expertise and deliver practical solutions that add value. With strong problem-solving skills and a collaborative mindset, I confidently handle different parts of the development process and contribute effectively to team projects.'
         }
       </div>
       <div className="mt-auto flex gap-4">
