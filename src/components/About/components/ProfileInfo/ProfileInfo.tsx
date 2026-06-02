@@ -17,7 +17,7 @@ const ProfileInfo = () => {
       </ul>
       <div className="max-w-170 my-6 text-[15px] text-text-secondary">
         {
-          'Motivated Software Engineer with 4+ years of experience in JavaScript, TypeScript, React, and Node.js, including 3 years of professional experience in a company environment. As a self-taught developer, I am a dedicated and hardworking individual with a strong passion for personal and professional growth. Currently expanding into game development using C++ and Unreal Engine 5, working on a pet projects while continuously strengthening my C++ skills. I continuously refine my full-stack JavaScript skills alongside my work in other areas. I’m always eager to expand my expertise and deliver practical solutions that add value. With strong problem-solving skills and a collaborative mindset, I confidently handle different parts of the development process and contribute effectively to team projects.'
+          'Full-stack engineer building production web apps in TypeScript since 2023 — React/Next.js on the front, Nest.js on the back. At Apiko I ship features end-to-end across enterprise products, and I gravitate toward the messy integration work: enterprise SSO, headless CMS, browser extensions, third-party data APIs. Outside of web, I am teaching myself C++ and Unreal Engine 5 — currently building Wilderness Alone, a top-down survival game with its core systems written from scratch. Same instinct in both: understand the system deeply, then build the hard part myself.'
         }
       </div>
       <div className="mt-auto flex gap-4">
