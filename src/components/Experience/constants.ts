@@ -35,7 +35,7 @@ export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
       },
       {
         name: "Andy's Bet Club",
-        dateRange: 'Aug 2025 – Sep 2025 and March 2026 - Apr 2026',
+        dateRange: 'Aug 2025 – Sep 2025 and March 2026 - May 2026',
         description:
           'Football prediction game with leaderboards. Implemented ranking logic, scoring, and football-data API integration on React, Nest.js, PostgreSQL, and Redis.',
       },
