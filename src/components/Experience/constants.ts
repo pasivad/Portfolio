@@ -3,7 +3,7 @@ import { ExperienceItemProps, ExperienceItemType } from './components/Experience
 export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
   {
     type: ExperienceItemType.Company,
-    dateRange: 'Dec 2023 — Mar 2026',
+    dateRange: 'Apr 2022 — Present',
     company: { name: 'Apiko', description: 'Digital transformation consultancy · Ternopil, UA' },
     position: 'Full-Stack Developer',
     description:
@@ -23,19 +23,19 @@ export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
     projects: [
       {
         name: 'Lanai',
-        dateRange: 'Apr 2024 – Aug 2025',
+        dateRange: 'Mar 2023 – Mar 2025',
         description:
           'AI-native enterprise SaaS for usage monitoring & policy enforcement, founded by Google + VMware veterans. Built a Chrome extension to track GenAI activity across emerging tools, a Next.js admin panel with Chart.js dashboards, and Nest.js services to securely process prompt data. Integrated Auth0, Okta, Microsoft Graph, and PingOne identity flows.',
       },
       {
         name: 'Hotaly',
-        dateRange: 'Sep 2025 – Feb 2026',
+        dateRange: 'Aug 2025 – May 2026',
         description:
           'Multi-brand venue listing platform — built front-end sites and a unified admin dashboard from a single Next.js + PayloadCMS + Radix codebase, backed by MongoDB.',
       },
       {
         name: "Andy's Bet Club",
-        dateRange: 'Aug 2025 – Sep 2025 and March 2026 - May 2026',
+        dateRange: 'Apr 2025 – Jul 2025 and Apr 2026 – Jun 2026',
         description:
           'Football prediction game with leaderboards. Implemented ranking logic, scoring, and football-data API integration on React, Nest.js, PostgreSQL, and Redis.',
       },
@@ -47,7 +47,7 @@ export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
       },
       {
         name: 'Huddex',
-        dateRange: 'Dec 2023 – Mar 2024',
+        dateRange: 'Apr 2022 – Feb 2023',
         description:
           'Peer-to-peer package shipping mobile app. Built admin panel and GraphQL backend services; integrated SendGrid, SMS, Slack notifications, and IDWise identity verification.',
       },
@@ -70,7 +70,7 @@ export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
   },
   {
     type: ExperienceItemType.Education,
-    dateRange: '2021 — 2022',
+    dateRange: '2020 — 2021',
     company: { name: 'APIKO ACADEMY', description: 'Bootcamp' },
     position: 'Front-end React JS Web Development Course',
     description:

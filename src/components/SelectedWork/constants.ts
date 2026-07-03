@@ -19,9 +19,9 @@ export const SELECTED_WORK: WorkEntity[] = [
       'PingOne',
     ],
     role: 'Full-Stack',
-    date: '2024–25',
+    date: '2023–25',
     team: '6 people + 4 client-side',
-    duration: 'Apr 2024 – Aug 2025',
+    duration: 'Mar 2023 – Mar 2025',
     overview:
       'Lanai gives enterprise IT and security teams real-time visibility into every employee interaction with AI tools — including unapproved ones — by analysing prompt-level data. The platform helps companies reduce compliance risk, prevent data leaks, and identify high-value AI use cases. I built the core capture layer, the admin panel, and the multi-tenant backend.',
     role_detail:
@@ -69,12 +69,15 @@ export const SELECTED_WORK: WorkEntity[] = [
     ],
     challenges: [
       {
-        problem: 'Detecting prompt-containing requests across any AI tool — including ones that did not exist yet — without relying on predefined URL lists.',
-        solution: 'Extension intercepts all browser requests and inspects content to identify prompts regardless of the destination, making it compatible with any AI tool automatically.',
+        problem:
+          'Detecting prompt-containing requests across any AI tool — including ones that did not exist yet — without relying on predefined URL lists.',
+        solution:
+          'Extension intercepts all browser requests and inspects content to identify prompts regardless of the destination, making it compatible with any AI tool automatically.',
       },
       {
         problem: 'Supporting Auth0, Okta, and PingOne in a single multi-tenant auth flow.',
-        solution: 'Abstracted identity pipeline that resolves the active provider per tenant from a config registry at request time.',
+        solution:
+          'Abstracted identity pipeline that resolves the active provider per tenant from a config registry at request time.',
       },
     ],
   },
@@ -83,11 +86,11 @@ export const SELECTED_WORK: WorkEntity[] = [
     name: 'Hotaly',
     description:
       'Unified venue listing platform running multiple branded sites from a single Next.js + PayloadCMS codebase, each targeting a different market segment.',
-    technologies: ['TypeScript', 'C#', 'Next.js', 'PayloadCMS', 'Radix UI', 'MongoDB', 'PostgreSQL', 'AWS SDK', 'Vite'],
+    technologies: ['TypeScript', 'Next.js', 'PayloadCMS', 'Radix UI', 'MongoDB', 'PostgreSQL', 'AWS SDK', 'Vite'],
     role: 'Full-Stack',
     date: '2025–26',
     team: '4 people',
-    duration: 'Sep 2025 – Feb 2026',
+    duration: 'Aug 2025 – May 2026',
     overview:
       'Hotaly aggregates venues, activities, and hospitality services under multiple branded sites — corporate events, leisure, family adventures, tourism — all driven from a single codebase and unified CMS. Operators manage all brands from one PayloadCMS interface while each site gets its own domain, design, and SEO configuration.',
     role_detail:
@@ -111,7 +114,7 @@ export const SELECTED_WORK: WorkEntity[] = [
       { v: '3', l: 'branded sites' },
       { v: '1', l: 'shared codebase' },
       { v: 'Zero', l: 'code duplication' },
-      { v: '5 mo', l: 'delivery' },
+      { v: '10 mo', l: 'delivery' },
     ],
     architecture: [
       'Next.js App',
@@ -131,12 +134,16 @@ export const SELECTED_WORK: WorkEntity[] = [
     ],
     challenges: [
       {
-        problem: 'Rendering completely distinct brand experiences — different themes, layouts, SEO — from a single Next.js codebase without code duplication.',
-        solution: 'Middleware resolves the active brand from the incoming hostname at request time and injects design tokens, layout config, and SEO metadata — no per-brand code branches anywhere in the app.',
+        problem:
+          'Rendering completely distinct brand experiences — different themes, layouts, SEO — from a single Next.js codebase without code duplication.',
+        solution:
+          'Middleware resolves the active brand from the incoming hostname at request time and injects design tokens, layout config, and SEO metadata — no per-brand code branches anywhere in the app.',
       },
       {
-        problem: 'Keeping content editors productive across multiple brands without duplicating data entry or switching systems.',
-        solution: 'Unified PayloadCMS collection model with per-brand access control and reusable field groups — editors manage all brands from one interface with role-scoped visibility.',
+        problem:
+          'Keeping content editors productive across multiple brands without duplicating data entry or switching systems.',
+        solution:
+          'Unified PayloadCMS collection model with per-brand access control and reusable field groups — editors manage all brands from one interface with role-scoped visibility.',
       },
     ],
   },
@@ -151,7 +158,7 @@ export const SELECTED_WORK: WorkEntity[] = [
     team: '4 people',
     duration: '2 months across 2 stints',
     overview:
-      "Andy's Bet Club Predictor lets users submit full Premier League table predictions at the start of the season, then scores them against real results as the season progresses. The platform combines live sports data, a custom scoring algorithm, and accuracy-based leaderboards with cash prizes. I contributed across two separate stints (Aug–Sep 2025 and Mar–Apr 2026).",
+      "Andy's Bet Club Predictor lets users submit full Premier League table predictions at the start of the season, then scores them against real results as the season progresses. The platform combines live sports data, a custom scoring algorithm, and accuracy-based leaderboards with cash prizes. I contributed across two separate stints (Apr–Jul 2025 and Apr–Jun 2026).",
     role_detail:
       'I developed core game functionality including the ranking and scoring logic, leaderboard systems, and football-data API integration, plus performance work to handle peak traffic during submission windows.',
     contributions: [
@@ -197,12 +204,16 @@ export const SELECTED_WORK: WorkEntity[] = [
     ],
     challenges: [
       {
-        problem: 'The platform had to handle hundreds of thousands of concurrent users during season-open submission windows without degrading response times.',
-        solution: 'Redis-backed leaderboard cache with write-through invalidation — PostgreSQL remains the authoritative store while Redis absorbs real-time rank reads at scale. DB queries profiled and optimised for peak load.',
+        problem:
+          'The platform had to handle hundreds of thousands of concurrent users during season-open submission windows without degrading response times.',
+        solution:
+          'Redis-backed leaderboard cache with write-through invalidation — PostgreSQL remains the authoritative store while Redis absorbs real-time rank reads at scale. DB queries profiled and optimised for peak load.',
       },
       {
-        problem: 'All fixture, team, and results data came from a third-party client API, requiring a flexible and resilient integration layer.',
-        solution: 'Built a dedicated sync service with scheduled jobs, caching, and error handling to consume the client API — decoupling our scoring and leaderboard logic from upstream availability.',
+        problem:
+          'All fixture, team, and results data came from a third-party client API, requiring a flexible and resilient integration layer.',
+        solution:
+          'Built a dedicated sync service with scheduled jobs, caching, and error handling to consume the client API — decoupling our scoring and leaderboard logic from upstream availability.',
       },
     ],
   },
@@ -211,11 +222,21 @@ export const SELECTED_WORK: WorkEntity[] = [
     name: 'Huddex',
     description:
       'P2P package delivery app pairing senders with travellers already making the journey. Owned the GraphQL backend and ops admin panel.',
-    technologies: ['TypeScript', 'React', 'Nest.js', 'GraphQL', 'PostgreSQL', 'MicroORM', 'SendGrid', 'IDWise'],
+    technologies: [
+      'TypeScript',
+      'React',
+      'Nest.js',
+      'GraphQL',
+      'PostgreSQL',
+      'MikroORM',
+      'SendGrid',
+      'IDWise',
+      'Stripe',
+    ],
     role: 'Full-Stack',
-    date: '2023–24',
+    date: '2022–23',
     team: '8 people',
-    duration: 'Dec 2023 – Mar 2024',
+    duration: 'Apr 2022 – Feb 2023',
     overview:
       "Huddex is a two-sided mobile marketplace: senders get quick, affordable package delivery; travellers earn money by carrying small packages on trips they're already taking. I joined to build the ops-facing admin panel from scratch and extend the GraphQL backend with identity verification and notification pipelines.",
     role_detail:
@@ -255,12 +276,16 @@ export const SELECTED_WORK: WorkEntity[] = [
     ],
     challenges: [
       {
-        problem: 'IDWise KYC required async webhook handling with a multi-state document verification flow and automated account unlock on completion.',
-        solution: 'Webhook consumer with idempotent state transitions — document states (submitted, under-review, verified, rejected) modelled as a strict state machine with automatic account unlock on verification pass.',
+        problem:
+          'IDWise KYC required async webhook handling with a multi-state document verification flow and automated account unlock on completion.',
+        solution:
+          'Webhook consumer with idempotent state transitions — document states (submitted, under-review, verified, rejected) modelled as a strict state machine with automatic account unlock on verification pass.',
       },
       {
-        problem: 'Two user types (senders and couriers) with different data visibility, permissions, and workflow steps sharing a single GraphQL API.',
-        solution: 'Role-scoped resolvers with field-level permission guards — each user type sees only their relevant shipment data and available actions, enforced at the resolver layer.',
+        problem:
+          'Two user types (senders and couriers) with different data visibility, permissions, and workflow steps sharing a single GraphQL API.',
+        solution:
+          'Role-scoped resolvers with field-level permission guards — each user type sees only their relevant shipment data and available actions, enforced at the resolver layer.',
       },
     ],
   },
@@ -311,12 +336,16 @@ export const SELECTED_WORK: WorkEntity[] = [
     ],
     challenges: [
       {
-        problem: 'Uniform time-based frame sampling produced too many visually redundant frames, making token costs prohibitive at scale.',
-        solution: 'ffmpeg scene-change detection extracts only semantically distinct frames — cuts token usage ~70% compared to fixed-interval sampling without losing any meaningful UI state.',
+        problem:
+          'Uniform time-based frame sampling produced too many visually redundant frames, making token costs prohibitive at scale.',
+        solution:
+          'ffmpeg scene-change detection extracts only semantically distinct frames — cuts token usage ~70% compared to fixed-interval sampling without losing any meaningful UI state.',
       },
       {
-        problem: 'Producing consistent, schema-valid user story output across recordings with different lengths, UI density, and narration styles.',
-        solution: 'GPT-4o Function Calling enforces a strict output schema regardless of input variation — the model correlates audio narration with visual frames and emits structured JSON that maps directly to user story fields.',
+        problem:
+          'Producing consistent, schema-valid user story output across recordings with different lengths, UI density, and narration styles.',
+        solution:
+          'GPT-4o Function Calling enforces a strict output schema regardless of input variation — the model correlates audio narration with visual frames and emits structured JSON that maps directly to user story fields.',
       },
     ],
   },
