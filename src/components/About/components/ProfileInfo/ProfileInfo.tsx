@@ -27,9 +27,6 @@ const ProfileInfo = () => {
         <div className="border border-solid border-border-secondary uppercase px-3 py-2 text-xs text-text-secondary">
           BASED <span className="text-brand-primary font-semibold">WARSAW, PL</span>
         </div>
-        <div className="border border-solid border-border-secondary uppercase px-3 py-2 text-xs text-text-secondary">
-          STATUS <span className="text-brand-primary font-semibold">OPEN TO WORK</span>
-        </div>
       </div>
     </div>
   );

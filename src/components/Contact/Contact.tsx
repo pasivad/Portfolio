@@ -1,6 +1,6 @@
 import Button from '@/components/Button';
 
-import { CONTACT } from './constants';
+import { CONTACT, SHOW_GAME_DEV_RESUME } from './constants';
 import { IoMdArrowDropright } from 'react-icons/io';
 import Dot from '../Dot';
 
@@ -67,17 +67,19 @@ const Contact = () => {
             </a>
             # PDF download
           </div>
-          <div>
-            GAME DEV RESUME
-            <a
-              className="text-blue-active mx-2 decoration-dashed underline underline-offset-4"
-              href="/vlad_pasichnyk_game_dev_resume.pdf"
-              download="Vlad_Pasichnyk_GAME_DEV_Resume.pdf"
-            >
-              #
-            </a>
-            # PDF download
-          </div>
+          {SHOW_GAME_DEV_RESUME && (
+            <div>
+              GAME DEV RESUME
+              <a
+                className="text-blue-active mx-2 decoration-dashed underline underline-offset-4"
+                href="/vlad_pasichnyk_game_dev_resume.pdf"
+                download="Vlad_Pasichnyk_GAME_DEV_Resume.pdf"
+              >
+                #
+              </a>
+              # PDF download
+            </div>
+          )}
         </div>
         <div className="flex gap-2 mt-2 items-center">
           <span className="text-brand-primary">$</span>connect
@@ -113,12 +115,14 @@ const Contact = () => {
         >
           Resume.pdf
         </Button>
-        <Button
-          href="/vlad_pasichnyk_game_dev_resume.pdf"
-          download="Vlad_Pasichnyk_GAME_DEV_Resume.pdf"
-        >
-          GAME DEV Resume.pdf
-        </Button>
+        {SHOW_GAME_DEV_RESUME && (
+          <Button
+            href="/vlad_pasichnyk_game_dev_resume.pdf"
+            download="Vlad_Pasichnyk_GAME_DEV_Resume.pdf"
+          >
+            GAME DEV Resume.pdf
+          </Button>
+        )}
       </div>
     </div>
   );
