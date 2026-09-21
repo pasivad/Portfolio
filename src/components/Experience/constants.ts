@@ -7,49 +7,55 @@ export const EXPERIENCE_ITEMS: ExperienceItemProps[] = [
     company: { name: 'Apiko', description: 'Digital transformation consultancy · Ternopil, UA' },
     position: 'Full-Stack Developer',
     description:
-      'Shipped front-ends, back-ends, admin dashboards, browser extensions, and CLI tools across four enterprise projects. Owned features end-to-end and integrated complex third-party identity, AI, and data systems.',
+      'Delivered full-stack products for international clients: backend services, APIs and integrations in Node.js/TypeScript, a production Python codebase, multi-tenant services with enterprise SSO, and React/Next.js tools used daily by operations and content teams. Owned delivery end to end, including coordinating directly with client engineering teams and third-party vendors.',
     technologies: [
       'TypeScript',
+      'Node.js',
+      'Nest.js',
+      'Fastify',
+      'Python',
+      'FastAPI',
       'React',
       'Next.js',
-      'Nest.js',
+      'GraphQL',
       'PostgreSQL',
       'MongoDB',
-      'GraphQL',
+      'Redis',
       'Auth0',
       'Chrome API',
       'PayloadCMS',
+      'AWS',
     ],
     projects: [
       {
-        name: 'Lanai',
-        dateRange: 'Mar 2023 – Mar 2025',
+        name: 'Dexter',
+        dateRange: 'Jun 2026 – Sep 2026',
         description:
-          'AI-native enterprise SaaS for usage monitoring & policy enforcement, founded by Google + VMware veterans. Built a Chrome extension to track GenAI activity across emerging tools, a Next.js admin panel with Chart.js dashboards, and Nest.js services to securely process prompt data. Integrated Auth0, Okta, Microsoft Graph, and PingOne identity flows.',
+          'Event sales & lead-intake platform for restaurants and hotels. Led a 3-person team and built a JSON-driven form engine with per-customer theming; shipped iframe-embedded branded forms for 40+ venues across WordPress, Webflow and BentoBox, with onboarding down to 2–3 hours.',
+      },
+      {
+        name: 'Internal Recruitment & Employee Management Platform',
+        dateRange: 'Jul 2025 – Feb 2026',
+        description:
+          'Sole engineer on an unmaintained internal platform, brought back into daily use by the recruitment and accounting teams. Cut the candidate-listing endpoint from ~20s to ~2s, migrated Node.js v14 → v22, rebuilt the UI on shadcn/ui, and added PDF CV generation and ATS-style application scoring.',
       },
       {
         name: 'Hotaly',
-        dateRange: 'Aug 2025 – May 2026',
+        dateRange: 'Sep 2024 – Jun 2025',
         description:
-          'Multi-brand venue listing platform — built front-end sites and a unified admin dashboard from a single Next.js + PayloadCMS + Radix codebase, backed by MongoDB.',
+          'Multi-brand venue listing platform. Maintained the Python FastAPI backend (SQLAlchemy, PostgreSQL) behind venue search, availability and booking, built 3 branded sites from one Next.js codebase, and designed the Payload CMS model and Radix UI operations dashboard.',
       },
       {
         name: "Andy's Bet Club",
-        dateRange: 'Apr 2025 – Jul 2025 and Apr 2026 – Jun 2026',
+        dateRange: 'Feb 2024 – May 2024 and Mar 2026 – May 2026',
         description:
-          'Football prediction game with leaderboards. Implemented ranking logic, scoring, and football-data API integration on React, Nest.js, PostgreSQL, and Redis.',
+          'Premier League prediction game that reached 40,000+ registered users in its first 7 days. Built the position-weighted scoring engine, a Redis-backed leaderboard with sub-millisecond rank lookups, and a football-data sync service resilient to third-party API outages.',
       },
       {
-        name: 'AI User-Story Generator (PoC)',
-        dateRange: 'Mar 2026',
+        name: 'Lanai',
+        dateRange: 'Apr 2022 – Jan 2024',
         description:
-          'Node.js pipeline that turns screen recordings into structured implementation stories. CLI with ffmpeg audio/frame extraction; OpenAI Function Calling correlates narration with UI actions to emit schema-enforced JSON.',
-      },
-      {
-        name: 'Huddex',
-        dateRange: 'Apr 2022 – Feb 2023',
-        description:
-          'Peer-to-peer package shipping mobile app. Built admin panel and GraphQL backend services; integrated SendGrid, SMS, Slack notifications, and IDWise identity verification.',
+          'Enterprise AI-monitoring SaaS. Built a Manifest V3 Chrome extension that detects AI prompts by request content rather than URL lists, a multi-tenant Nest.js backend on CockroachDB with row-level isolation, and a unified SSO pipeline across Auth0, Okta, Microsoft Graph and PingOne.',
       },
     ],
   },

@@ -26,7 +26,7 @@ const Contact = () => {
           <span className="text-brand-primary">$</span>whoami
         </div>
         <div className="flex flex-col gap-2 ml-4 text-text-secondary">
-          <div>pasichnyktwitch@gmail.com</div>
+          <div>{CONTACT.email}</div>
           <div>[PL] +48 572 885 944</div>
           <div>[UA] +380 99 526 3717</div>
         </div>
